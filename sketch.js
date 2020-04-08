@@ -95,7 +95,7 @@ function draw() {
    gameOver.visible = true;
    restart.visible = true;
    gameOver.depth = trex.depth + 2
-   restart.depth = obstacle.depth + 2 
+   restart.depth = obstacle.depth + 10
    trex.changeAnimation("collided", trex_collided);
    trex.velocityY = 0;
    
@@ -170,4 +170,5 @@ function reset(){
   cloudsGroup.destroyEach();
   score = 0;
   trex.changeAnimation("running", trex_running);
+  trex.y = 180;
 }
