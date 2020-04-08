@@ -97,6 +97,7 @@ function draw() {
    gameOver.depth = cloud.depth + 1
    restart.depth = obstacle.depth + 1 
    trex.changeAnimation("collided", trex_collided);
+   trex.velocityY = 0;
    
    if (mousePressedOver(restart)){
     reset();
