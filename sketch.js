@@ -94,8 +94,8 @@ function draw() {
    cloudsGroup.setLifetimeEach(-1);
    gameOver.visible = true;
    restart.visible = true;
-   gameOver.depth = cloud.depth + 1
-   restart.depth = obstacle.depth + 1 
+   gameOver.depth = trex.depth + 2
+   restart.depth = obstacle.depth + 2 
    trex.changeAnimation("collided", trex_collided);
    trex.velocityY = 0;
    
