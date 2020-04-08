@@ -91,8 +91,8 @@ function draw() {
   obstaclesGroup.setVelocityXEach(0);
   cloudsGroup.setVelocityXEach(0);
   obstaclesGroup.setLifetimeEach(-1);
-  gameOver.depth = cloud.depth + 2;
-  restart.depth = obstacle.depth + 2;
+  gameOver.depth = cloud.depth + 1;
+  restart.depth = obstacle.depth + 1;
   cloudsGroup.setLifetimeEach(-1);
   gameOver.visible = true;
   restart.visible = true;
