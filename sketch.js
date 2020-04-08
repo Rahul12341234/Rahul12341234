@@ -170,5 +170,4 @@ function reset(){
   cloudsGroup.destroyEach();
   score = 0;
   trex.changeAnimation("running", trex_running);
-  trex.y = 180;
 }
