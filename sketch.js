@@ -70,7 +70,7 @@ function draw() {
   score = score + Math.round(getFrameRate()/60);
   ground.velocityX = -(4 + 3*score/100);
   if(keyDown("space") && trex.y > 159) {
-    trex.velocityY = -15;
+    trex.velocityY = -13;
   }
     
   trex.velocityY = trex.velocityY + 0.8
@@ -91,13 +91,14 @@ function draw() {
   obstaclesGroup.setVelocityXEach(0);
   cloudsGroup.setVelocityXEach(0);
   obstaclesGroup.setLifetimeEach(-1);
+  gameOver.depth = cloud.depth + 2;
+  restart.depth = obstacle.depth + 2;
   cloudsGroup.setLifetimeEach(-1);
   gameOver.visible = true;
   restart.visible = true;
   trex.changeAnimation("collided", trex_collided);
   if (mousePressedOver(restart)){
   reset();
-    
   }
   }
   
@@ -132,7 +133,7 @@ function spawnClouds() {
 function spawnObstacles() {
   if(frameCount % 60 === 0) {
     var obstacle = createSprite(600,165,10,40);
-    obstacle.velocityX = -4;
+    obstacle.velocityX = ground.velocityX;
     
     //generate random obstacles
     var rand = Math.round(random(1,6));
