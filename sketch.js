@@ -91,8 +91,6 @@ function draw() {
   obstaclesGroup.setVelocityXEach(0);
   cloudsGroup.setVelocityXEach(0);
   obstaclesGroup.setLifetimeEach(-1);
-  gameOver.depth = cloud.depth + 1;
-  restart.depth = obstacle.depth + 1;
   cloudsGroup.setLifetimeEach(-1);
   gameOver.visible = true;
   restart.visible = true;
@@ -133,7 +131,7 @@ function spawnClouds() {
 function spawnObstacles() {
   if(frameCount % 60 === 0) {
     var obstacle = createSprite(600,165,10,40);
-    obstacle.velocityX = ground.velocityX;
+    obstacle.velocityX = -(4 + 3*score/100);
     
     //generate random obstacles
     var rand = Math.round(random(1,6));
